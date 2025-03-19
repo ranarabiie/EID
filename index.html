@@ -40,6 +40,29 @@
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="love letter 2.js"></script>
+    <script>
+      $(document).ready(function () {
+  var envelope = $("#envelope");
+  var btn_open = $("#open");
+  var btn_reset = $("#reset");
+
+  envelope.click(function () {
+    open();
+  });
+  btn_open.click(function () {
+    open();
+  });
+  btn_reset.click(function () {
+    close();
+  });
+
+  function open() {
+    envelope.addClass("open").removeClass("close");
+  }
+  function close() {
+    envelope.addClass("close").removeClass("open");
+  }
+});
+      </script>
   </body>
 </html>
